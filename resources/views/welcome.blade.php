@@ -14,7 +14,7 @@
         <!-- Styles -->
         <style>
           html{line-height:1.15;-webkit-text-size-adjust:100%}
-          body{margin:0}a{background-color:transparent}[hidden]{display:none}
+          body{margin:0}a{background-color:grey}[hidden]{display:none}
           html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,
           :after,
           :before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}
@@ -35,7 +35,7 @@
         </style>
 
     </head>
-    <body class="antialiased bg-blue-500">
+    <body style="background-color:black" class="antialiased bg-blue-500">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
            
             <div id="app">

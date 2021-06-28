@@ -74,8 +74,8 @@ public function client(Request $request){
 }
 
 public function clients(){
-     $clients = Client::paginate(3);
-    // $clients = Client::all();
+    //  $clients = Client::paginate(3);
+     $clients = Client::all();
     return response()->json([
       
       'data'=>$clients, 

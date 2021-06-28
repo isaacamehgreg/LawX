@@ -74,7 +74,7 @@
                 vm.makePagination(res.meta, res.links );
 
             }).catch(err => console.log(err));
-          }
+          },
 
          makePagination(meta, links){
            let pagination ={
