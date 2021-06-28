@@ -1885,6 +1885,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1904,10 +1905,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     fetchClients: function fetchClients() {
-      fetch('api/clients').then(function (res) {
-        return res.json;
+      var _this = this;
+
+      fetch('api/clients').then(function (data) {
+        return data.json();
       }).then(function (res) {
-        console.log(res);
+        console.log(res.data);
+        _this.clients = res.data;
       });
     }
   }
@@ -37522,60 +37526,68 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "max-w-6xl mx-auto sm:px-6 lg:px-8" }, [
-      _c(
+  return _c(
+    "div",
+    _vm._l(_vm.clients, function(client) {
+      return _c(
         "div",
-        {
-          staticClass:
-            "mt-8 bg-blue dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg"
-        },
+        { key: client.id, staticClass: "max-w-6xl mx-auto sm:px-6 lg:px-8" },
         [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "p-6" }, [
-              _c("div", { staticClass: "flex items-center" }, [
-                _c("svg", {
-                  staticClass: "w-8 h-8 text-gray-500",
-                  attrs: {
-                    fill: "none",
-                    stroke: "currentColor",
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    viewBox: "0 0 24 24"
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
-                  [_vm._v("All Clients")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
-                  [_vm._v("All Clients")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
-                  [_vm._v("All Clients")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
-                  [_vm._v("All Clients")]
-                )
+          _c(
+            "div",
+            {
+              staticClass:
+                "mt-8 bg-blue dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg"
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "p-6" }, [
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.firstName))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.lastName))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.email))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.dateOfBirth))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.caseDetail))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                      [_vm._v(_vm._s(client.dateProfiled))]
+                    )
+                  ])
+                ])
               ])
-            ])
-          ])
+            ]
+          )
         ]
       )
-    ])
-  ])
+    }),
+    0
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

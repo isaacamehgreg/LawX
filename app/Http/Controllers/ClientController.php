@@ -74,9 +74,10 @@ public function client(Request $request){
 }
 
 public function clients(){
-    $clients = Client::paginate(3);
+     $clients = Client::paginate(3);
+    // $clients = Client::all();
     return response()->json([
-      'status'=>"success",
+      
       'data'=>$clients, 
     ],200);
 }
@@ -86,7 +87,7 @@ public function client_id($id){
    
     $client = Client::find($id);
      return response()->json([
-       'status'=>"success",
+     
        'data'=>$client, 
      ],200);
  
