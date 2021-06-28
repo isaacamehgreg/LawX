@@ -7,23 +7,17 @@
 
                     <div class="row">
 
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold">All Clients</div>
+                        <div class="p-6" >
+
+                            <div class="flex items-center" v-for="client in clients" v-bind:key="client.id"  >
+
+                                <div class="ml-4 text-lg leading-7 font-semibold">{{client.firstName}}</div>   
+                                
                             </div>
          
                           
                         </div>
 
-                      
-
-                   
-
-
-                   
-
-              
 
                   
                     </div>
@@ -67,7 +61,8 @@
             fetch('api/clients').
             then(res =>res.json).
             then(res=>{
-                console.log(res);
+                console.log(res.data);
+                this.clients = res.data;
             })
           }
       }

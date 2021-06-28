@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/client', [ClientController::class, 'client']);
-Route::get('/client', [ClientController::class, 'clients']);
+Route::get('/clients', [ClientController::class, 'clients']);
 Route::get('/client/{id}', [ClientController::class, 'client_id']);
 Route::get('/client/find/{$query}', [ClientController::class, 'client_find']);
 

@@ -1834,6 +1834,87 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/clients.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/clients.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      clients: [],
+      client: {
+        id: '',
+        firstName: '',
+        lastName: ''
+      },
+      client_id: '',
+      pagination: {},
+      edit: false
+    };
+  },
+  created: function created() {
+    this.fetchClients();
+  },
+  methods: {
+    fetchClients: function fetchClients() {
+      fetch('api/clients').then(function (res) {
+        return res.json;
+      }).then(function (res) {
+        console.log(res);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -37311,15 +37392,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _clients_vue_vue_type_template_id_6ac4c38d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clients.vue?vue&type=template&id=6ac4c38d& */ "./resources/js/components/clients.vue?vue&type=template&id=6ac4c38d&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _clients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clients.vue?vue&type=script&lang=js& */ "./resources/js/components/clients.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _clients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _clients_vue_vue_type_template_id_6ac4c38d___WEBPACK_IMPORTED_MODULE_0__.render,
   _clients_vue_vue_type_template_id_6ac4c38d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -37370,6 +37453,22 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 if (false) { var api; }
 component.options.__file = "resources/js/components/home.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/clients.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/clients.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_clients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./clients.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/clients.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_clients_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -37432,30 +37531,37 @@ var render = function() {
             "mt-8 bg-blue dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg"
         },
         [
-          _c("div", { staticClass: "grid grid-cols-1 md:grid-cols-6" }, [
+          _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "p-6" }, [
               _c("div", { staticClass: "flex items-center" }, [
+                _c("svg", {
+                  staticClass: "w-8 h-8 text-gray-500",
+                  attrs: {
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "2",
+                    viewBox: "0 0 24 24"
+                  }
+                }),
+                _vm._v(" "),
                 _c(
-                  "svg",
-                  {
-                    staticClass: "w-8 h-8 text-gray-500",
-                    attrs: {
-                      fill: "none",
-                      stroke: "currentColor",
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round",
-                      "stroke-width": "2",
-                      viewBox: "0 0 24 24"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      }
-                    })
-                  ]
+                  "div",
+                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                  [_vm._v("All Clients")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                  [_vm._v("All Clients")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "ml-4 text-lg leading-7 font-semibold" },
+                  [_vm._v("All Clients")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -37464,231 +37570,14 @@ var render = function() {
                   [_vm._v("All Clients")]
                 )
               ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "p-6 border-t border-gray-200 bg-green-500 dark:border-gray-700 md:border-t-0 md:border-l"
-              },
-              [
-                _c("div", { staticClass: "flex items-center" }, [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-8 h-8 text-gray-500",
-                      attrs: {
-                        fill: "none",
-                        stroke: "currentColor",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                        }
-                      }),
-                      _c("path", {
-                        attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(0)
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "p-6 border-t border-gray-200 bg-green-500 dark:border-gray-700 md:border-t-0 md:border-l"
-              },
-              [
-                _c("div", { staticClass: "flex items-center" }, [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-8 h-8 text-gray-500",
-                      attrs: {
-                        fill: "none",
-                        stroke: "currentColor",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                        }
-                      }),
-                      _c("path", {
-                        attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(1)
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "p-6 border-t border-gray-200 bg-green-500 dark:border-gray-700 md:border-t-0 md:border-l"
-              },
-              [
-                _c("div", { staticClass: "flex items-center" }, [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-8 h-8 text-gray-500",
-                      attrs: {
-                        fill: "none",
-                        stroke: "currentColor",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                        }
-                      }),
-                      _c("path", {
-                        attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(2)
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "p-6 border-t border-gray-200 bg-green-500 dark:border-gray-700 md:border-t-0 md:border-l"
-              },
-              [
-                _c("div", { staticClass: "flex items-center" }, [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-8 h-8 text-gray-500",
-                      attrs: {
-                        fill: "none",
-                        stroke: "currentColor",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                        }
-                      }),
-                      _c("path", {
-                        attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(3)
-                ])
-              ]
-            )
+            ])
           ])
         ]
       )
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-4 text-lg leading-7 font-semibold" }, [
-      _c(
-        "a",
-        {
-          staticClass: "underline text-gray-900 dark:text-white",
-          attrs: { href: "https://laracasts.com" }
-        },
-        [_vm._v("Profile Client")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-4 text-lg leading-7 font-semibold" }, [
-      _c(
-        "a",
-        {
-          staticClass: "underline text-gray-900 dark:text-white",
-          attrs: { href: "https://laracasts.com" }
-        },
-        [_vm._v("Profile Client")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-4 text-lg leading-7 font-semibold" }, [
-      _c(
-        "a",
-        {
-          staticClass: "underline text-gray-900 dark:text-white",
-          attrs: { href: "https://laracasts.com" }
-        },
-        [_vm._v("Profile Client")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-4 text-lg leading-7 font-semibold" }, [
-      _c(
-        "a",
-        {
-          staticClass: "underline text-gray-900 dark:text-white",
-          attrs: { href: "https://laracasts.com" }
-        },
-        [_vm._v("Profile Client")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
